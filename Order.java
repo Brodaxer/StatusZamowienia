@@ -33,7 +33,14 @@ class Order {
         this.status = status;
     }
 
-
+    @Override
+    public String toString() {
+        return "Order{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", status=" + status +
+                '}';
+    }
 }
 
 enum Status {
