@@ -7,6 +7,6 @@ public class Test {
         test.add(new Order("Telefon",12400,Status.NEW));
         test.add(new Order("Kupa",1,Status.SHIPPED));
 //        test.find(test,Status.NEW);
-        System.out.println(test.find(test,Status.NEW));
+        System.out.println(test.find(Status.NEW));
     }
 }

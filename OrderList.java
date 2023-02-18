@@ -10,7 +10,7 @@ class OrderList {
         }
     }
 
-    public String find(OrderList orderList, Status status) {
+    public String find( Status status) {
         String s = "";
         for (int i = 0; i < totalOrders; i++) {
             if (orders[i].getStatus() == status) {
