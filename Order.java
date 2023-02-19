@@ -1,7 +1,10 @@
+
+
 class Order {
     private String name;
     private double price;
     private Status status;
+
 
     public Order(String name, double price, Status status) {
         this.name = name;
@@ -11,6 +14,9 @@ class Order {
 
     public String getName() {
         return name;
+    }
+    public String getDescription(){
+        return status.getDescripiton();
     }
 
     public void setName(String name) {
@@ -35,16 +41,15 @@ class Order {
 
     @Override
     public String toString() {
-        return "Order{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                ", status=" + status +
-                '}';
+        return name  +
+                " (" + price +
+                ") " + status.getDescripiton() ;
     }
+
 }
 
 enum Status {
-    NEW("Nowe, nie oplacone"), PAID("Oplacone"), SHIPPED("Wyslane"),
+    NEW("Nowe"), PAID("Oplacone"), SHIPPED("Wyslane"),
     DELIVERED("Dostarczone"), CANCELED("Anulowane");
 
     private String descripiton;
@@ -56,5 +61,6 @@ enum Status {
     public String getDescripiton() {
         return descripiton;
     }
+
 
 }
